@@ -3,6 +3,7 @@ package com.parse.starter;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -18,16 +19,19 @@ import com.parse.ParseUser;
 import com.parse.SaveCallback;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class CreateTweet extends AppCompatActivity implements View.OnClickListener, View.OnKeyListener {
 	Button cancelButton, tweetButton;
 	EditText tweetEditText;
-	ArrayList<String> usersTweets;
+	List<String> usersTweets;
 	ParseUser user;
 	ConstraintLayout layout;
 	ImageView imageView;
-
+	String currentTweet;
 	@Override
 	public boolean onKey(View view, int i, KeyEvent keyEvent) {
 		if (i == KeyEvent.KEYCODE_ENTER && keyEvent.getAction() == KeyEvent.ACTION_DOWN) {
@@ -55,43 +59,56 @@ public class CreateTweet extends AppCompatActivity implements View.OnClickListen
 
 	public void tweet(View view) {
 		if (!tweetEditText.getText().toString().isEmpty() && tweetEditText.getText().toString().length() < 140) {
-		user = ParseUser.getCurrentUser();
-		ParseQuery<ParseUser> query = ParseUser.getQuery();
-		query.whereEqualTo("username", user.getUsername());
-		query.findInBackground(new FindCallback<ParseUser>() {
-			@Override
-			public void done(List<ParseUser> objects, ParseException e) {
-				if (e == null) {
-					if (objects.size() > 0) {
-						if (user.get("tweets") != null) {
-							for (int i = 0; i <  {
-							usersTweets.add(tweetEditText.getText().toString());
+			currentTweet = "";
+			user = ParseUser.getCurrentUser();
+			ParseQuery<ParseUser> query = ParseUser.getQuery();
+			Log.i("User", user.getUsername());
+			query.whereEqualTo("username", user.getUsername());
+			query.findInBackground(new FindCallback<ParseUser>() {
+				@Override
+				public void done(List<ParseUser> objects, ParseException e) {
+					if (e == null) {
+						if (objects.size() > 0) {
+							if (objects.get(0).get("tweets") != null) {
+								Log.i("tweets", objects.get(0).get("tweets").toString());
+								// Regex to get all past tweets
+								Pattern p = Pattern.compile("\\[(.*?)\\]");
+								Matcher m = p.matcher(objects.get(0).get("tweets").toString());
+								while (m.find()) {
+									usersTweets.add(m.group(0));
+									Log.i("this is working", "WORK!");
+								}
+								if ()
+								Log.i("user tweets", usersTweets.toString());
+								// puts into tweets arraylist
+								usersTweets.add(objects.get(0).get("tweets").toString());
+								usersTweets.add(tweetEditText.getText().toString());
+							} else {
+								usersTweets.add(tweetEditText.getText().toString());
+							}
+							user.put("tweets", usersTweets);
+							user.saveInBackground(new SaveCallback() {
+								@Override
+								public void done(ParseException e) {
+									if (e == null) {
+										Toast.makeText(CreateTweet.this, "Tweet sent out!", Toast.LENGTH_SHORT).show();
+										finish();
+									} else {
+										e.printStackTrace();
+									}
+								}
+							});
 						} else {
-							usersTweets.add(tweetEditText.getText().toString());
+							Toast.makeText(CreateTweet.this, "Please ensure your tweet is less than 140 characters, or isn't empty.", Toast.LENGTH_LONG).show();
 						}
 					}
-					user.put("tweets", usersTweets);
-					user.saveInBackground(new SaveCallback() {
-						@Override
-						public void done(ParseException e) {
-							if (e == null) {
-								Toast.makeText(CreateTweet.this,"Tweet sent out!", Toast.LENGTH_SHORT).show();
-								finish();
-							} else {
-								e.printStackTrace();
-							}
-						}
-					});
 				}
-			}
-		});
-		} else {
-			Toast.makeText(CreateTweet.this, "Please ensure your tweet is less than 140 characters, or isn't empty.", Toast.LENGTH_LONG).show();
+			});
 		}
 	}
 
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
+	protected void onCreate (Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_create_tweet);
 		setTitle("Tweet");
