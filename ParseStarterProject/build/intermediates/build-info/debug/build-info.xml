@@ -7,78 +7,78 @@
     format="10"
     ir-eligibility="COMPATIBLE"
     plugin-version="3.3.0"
-    timestamp="1548883970618"
-    token="6656432940648857853"
+    timestamp="1548901646832"
+    token="8129722713518802313"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="412" />
+        duration="551" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="20" />
+        duration="54" />
     <task
         name="verifier"
-        duration="3" />
+        duration="41" />
 
     <artifact
-        location="C:\Users\TruongTI\Desktop\Android Oreo Development Course\Twitter\ParseStarterProject\build\intermediates\split-apk\debug\slices\slice_8.apk"
+        location="/Users/timmytruong/AndroidStudioProjects/Twitter/ParseStarterProject/build/intermediates/split-apk/debug/slices/slice_5.apk"
         type="SPLIT" />
 
     <build
         build-mode="FULL"
-        timestamp="1548881581944"
+        timestamp="1548899555992"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\Users\TruongTI\Desktop\Android Oreo Development Course\Twitter\ParseStarterProject\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            location="/Users/timmytruong/AndroidStudioProjects/Twitter/ParseStarterProject/build/intermediates/split-apk/debug/slices/slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\TruongTI\Desktop\Android Oreo Development Course\Twitter\ParseStarterProject\build\intermediates\split-apk\debug\dep\dependencies.apk"
+            location="/Users/timmytruong/AndroidStudioProjects/Twitter/ParseStarterProject/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\TruongTI\Desktop\Android Oreo Development Course\Twitter\ParseStarterProject\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            location="/Users/timmytruong/AndroidStudioProjects/Twitter/ParseStarterProject/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\TruongTI\Desktop\Android Oreo Development Course\Twitter\ParseStarterProject\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            location="/Users/timmytruong/AndroidStudioProjects/Twitter/ParseStarterProject/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\TruongTI\Desktop\Android Oreo Development Course\Twitter\ParseStarterProject\build\intermediates\resources\instant-run\debug\resources-debug.apk"
+            location="/Users/timmytruong/AndroidStudioProjects/Twitter/ParseStarterProject/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\TruongTI\Desktop\Android Oreo Development Course\Twitter\ParseStarterProject\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            location="/Users/timmytruong/AndroidStudioProjects/Twitter/ParseStarterProject/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\TruongTI\Desktop\Android Oreo Development Course\Twitter\ParseStarterProject\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            location="/Users/timmytruong/AndroidStudioProjects/Twitter/ParseStarterProject/build/intermediates/split-apk/debug/slices/slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\TruongTI\Desktop\Android Oreo Development Course\Twitter\ParseStarterProject\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            location="/Users/timmytruong/AndroidStudioProjects/Twitter/ParseStarterProject/build/intermediates/split-apk/debug/slices/slice_1.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\TruongTI\Desktop\Android Oreo Development Course\Twitter\ParseStarterProject\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            location="/Users/timmytruong/AndroidStudioProjects/Twitter/ParseStarterProject/build/intermediates/split-apk/debug/slices/slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\TruongTI\Desktop\Android Oreo Development Course\Twitter\ParseStarterProject\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            location="/Users/timmytruong/AndroidStudioProjects/Twitter/ParseStarterProject/build/intermediates/split-apk/debug/dep/dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\TruongTI\Desktop\Android Oreo Development Course\Twitter\ParseStarterProject\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            location="/Users/timmytruong/AndroidStudioProjects/Twitter/ParseStarterProject/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\TruongTI\Desktop\Android Oreo Development Course\Twitter\ParseStarterProject\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            location="/Users/timmytruong/AndroidStudioProjects/Twitter/ParseStarterProject/build/intermediates/resources/instant-run/debug/resources-debug.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\TruongTI\Desktop\Android Oreo Development Course\Twitter\ParseStarterProject\build\intermediates\instant-run-apk\debug\ParseStarterProject-debug.apk"
+            location="/Users/timmytruong/AndroidStudioProjects/Twitter/ParseStarterProject/build/intermediates/instant-run-apk/debug/ParseStarterProject-debug.apk"
             type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
         ir-eligibility="COMPATIBLE"
-        timestamp="1548883970618"
+        timestamp="1548901646832"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="C:\Users\TruongTI\Desktop\Android Oreo Development Course\Twitter\ParseStarterProject\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            location="/Users/timmytruong/AndroidStudioProjects/Twitter/ParseStarterProject/build/intermediates/split-apk/debug/slices/slice_5.apk"
             type="SPLIT" />
     </build>
 

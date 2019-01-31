@@ -19,10 +19,8 @@ import com.parse.ParseUser;
 import com.parse.SaveCallback;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+
 
 public class CreateTweet extends AppCompatActivity implements View.OnClickListener, View.OnKeyListener {
 	Button cancelButton, tweetButton;
@@ -72,20 +70,26 @@ public class CreateTweet extends AppCompatActivity implements View.OnClickListen
 							if (objects.get(0).get("tweets") != null) {
 								Log.i("tweets", objects.get(0).get("tweets").toString());
 								// Regex to get all past tweets
-								Pattern p = Pattern.compile("\\[(.*?)\\]");
-								Matcher m = p.matcher(objects.get(0).get("tweets").toString());
-								while (m.find()) {
-									usersTweets.add(m.group(0));
-									Log.i("this is working", "WORK!");
+                                String text = objects.get(0).get("tweets").toString();
+                                Log.i("text", text);
+								text = text.replaceAll("\\[", "");
+								text = text.replaceAll("\\]", "");
+
+								if (text.contains(", ")) {
+									String[] split = text.split(", ");
+									for (int i = 0; i < split.length; i++) {
+										usersTweets.add(split[i]);
+									}
+								} else {
+									usersTweets.add(text);
 								}
-								if ()
-								Log.i("user tweets", usersTweets.toString());
-								// puts into tweets arraylist
-								usersTweets.add(objects.get(0).get("tweets").toString());
+
 								usersTweets.add(tweetEditText.getText().toString());
+
 							} else {
 								usersTweets.add(tweetEditText.getText().toString());
 							}
+
 							user.put("tweets", usersTweets);
 							user.saveInBackground(new SaveCallback() {
 								@Override

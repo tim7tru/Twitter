@@ -4,5 +4,6 @@
     <item android:title="Tweet" android:id="@+id/tweet"/>
     <item android:title="Feed" android:id="@+id/feed"/>
     <item android:title="View Profile" android:id="@+id/view_profile"/>
+    <item android:title="Log Out" android:id="@+id/log_out"/>
 
 </menu>

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\TruongTI\\Desktop\\Android Oreo Development Course\\Twitter\\ParseStarterProject\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-mn-rMN\\values-mn-rMN.xml",
+            "outputFile": "/Users/timmytruong/AndroidStudioProjects/Twitter/ParseStarterProject/build/intermediates/incremental/mergeDebugResources/merged.dir/values-mn-rMN/values-mn-rMN.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\TruongTI\\.gradle\\caches\\transforms-1\\files-1.1\\mediarouter-v7-23.0.0.aar\\0e3ac2e8db81ae1ee49a54ea070041de\\res\\values-mn-rMN\\values-mn-rMN.xml",
+                    "source": "/Users/timmytruong/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-23.0.0.aar/27c3dae4b27a699a62006c7bc1620dad/res/values-mn-rMN/values-mn-rMN.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",

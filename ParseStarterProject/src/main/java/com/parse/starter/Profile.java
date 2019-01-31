@@ -50,6 +50,8 @@ public class Profile extends AppCompatActivity {
 				intent = new Intent(Profile.this, ViewProfile.class);
 				startActivity(intent);
 				return true;
+			case R.id.log_out:
+
 			default:
 				return false;
 		}
@@ -70,7 +72,6 @@ public class Profile extends AppCompatActivity {
 
 		query.whereNotEqualTo("username", ParseUser.getCurrentUser().getUsername());
 		query.addAscendingOrder("displayName");
-		Log.i("Username Logged In", ParseUser.getCurrentUser().getUsername());
 		query.findInBackground(new FindCallback<ParseUser>() {
 				@Override
 			public void done(List<ParseUser> objects, ParseException e) {

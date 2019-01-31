@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\TruongTI\\Desktop\\Android Oreo Development Course\\Twitter\\ParseStarterProject\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v22\\values-v22.xml",
+            "outputFile": "/Users/timmytruong/AndroidStudioProjects/Twitter/ParseStarterProject/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v22/values-v22.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\TruongTI\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.0.aar\\67ba018a70dc01dd914915f9315f9eb1\\res\\values-v22\\values-v22.xml",
+                    "source": "/Users/timmytruong/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.0.aar/f7fbe34edd5e33b70fbe1cc1f8335027/res/values-v22/values-v22.xml",
                     "from": {
                         "startLines": "2,3,4,9",
                         "startColumns": "4,4,4,4",

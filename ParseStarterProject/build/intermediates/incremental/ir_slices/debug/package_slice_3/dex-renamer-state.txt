@@ -1,4 +1,4 @@
-#Fri Jan 25 15:49:38 EST 2019
-base.0=C\:\\Users\\TruongTI\\Desktop\\Android Oreo Development Course\\Twitter\\ParseStarterProject\\build\\intermediates\\transforms\\dexMerger\\debug\\3
+#Wed Jan 30 20:43:49 EST 2019
+base.0=/Users/timmytruong/AndroidStudioProjects/Twitter/ParseStarterProject/build/intermediates/transforms/dexMerger/debug/3
 path.0=classes.dex
 renamed.0=classes.dex
